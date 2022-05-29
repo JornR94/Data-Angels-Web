@@ -52,7 +52,7 @@ class _YourDataWidgetState extends State<YourDataWidget> {
             borderWidth: 1,
             buttonSize: 60,
             fillColor: Colors.transparent,
-            icon: Icon(
+            icon: const Icon(
               Icons.add,
               color: Colors.white,
               size: 30,
@@ -62,7 +62,7 @@ class _YourDataWidgetState extends State<YourDataWidget> {
                 context: context,
                 shape: const RoundedRectangleBorder(
                   borderRadius: BorderRadius.vertical(
-                    top: const Radius.circular(
+                    top: Radius.circular(
                       20,
                     ),
                   ),
@@ -108,93 +108,105 @@ class _YourDataWidgetState extends State<YourDataWidget> {
                       const SizedBox(
                         height: 8,
                       ),
-                      const ListTile(
-                        leading: Icon(
+                      ListTile(
+                        leading: const Icon(
                           Icons.description_rounded,
                           color: Color.fromRGBO(89, 4, 255, 0),
                         ),
-                        title: Text(
+                        title: const Text(
                           'Documents',
                           style: TextStyle(
                             color: Color.fromRGBO(30, 30, 30, 0),
                           ),
                         ),
-                        subtitle: Text(
+                        subtitle: const Text(
                           'Upload official health documents',
                           style: TextStyle(
                             color: Color.fromRGBO(89, 4, 255, 0),
                           ),
                         ),
-                        trailing: Icon(
+                        trailing: const Icon(
                           Icons.keyboard_arrow_right_rounded,
                           color: Color.fromRGBO(89, 4, 255, 0),
                         ),
+                        onTap: () {
+                          Navigator.pop(context);
+                        },
                       ),
-                      const ListTile(
-                        leading: Icon(
+                      ListTile(
+                        leading: const Icon(
                           Icons.devices,
                           color: Color.fromRGBO(89, 4, 255, 0),
                         ),
-                        title: Text(
+                        title: const Text(
                           'App Information',
                           style: TextStyle(
                             color: Color.fromRGBO(30, 30, 30, 0),
                           ),
                         ),
-                        subtitle: Text(
+                        subtitle: const Text(
                           'Sync your favorite health apps',
                           style: TextStyle(
                             color: Color.fromRGBO(89, 4, 255, 0),
                           ),
                         ),
-                        trailing: Icon(
+                        trailing: const Icon(
                           Icons.keyboard_arrow_right_rounded,
                           color: Color.fromRGBO(89, 4, 255, 0),
                         ),
+                        onTap: () {
+                          Navigator.pop(context);
+                        },
                       ),
-                      const ListTile(
-                        leading: Icon(
+                      ListTile(
+                        leading: const Icon(
                           Icons.portrait_rounded,
                           color: Color.fromRGBO(89, 4, 255, 0),
                         ),
-                        title: Text(
+                        title: const Text(
                           'Health Details',
                           style: TextStyle(
                             color: Color.fromRGBO(30, 30, 30, 0),
                           ),
                         ),
-                        subtitle: Text(
+                        subtitle: const Text(
                           'Enter body and activity metrics',
                           style: TextStyle(
                             color: Color.fromRGBO(89, 4, 255, 0),
                           ),
                         ),
-                        trailing: Icon(
+                        trailing: const Icon(
                           Icons.keyboard_arrow_right_rounded,
                           color: Color.fromRGBO(89, 4, 255, 0),
                         ),
+                        onTap: () {
+                          Navigator.pop(context);
+                        },
                       ),
-                      const ListTile(
-                        leading: Icon(
+                      ListTile(
+                        leading: const Icon(
                           Icons.local_hospital_rounded,
                           color: Color.fromRGBO(89, 4, 255, 0),
                         ),
-                        title: Text(
+                        title: const Text(
                           'Genetic Data',
                           style: TextStyle(
                             color: Color.fromRGBO(30, 30, 30, 0),
                           ),
                         ),
-                        subtitle: Text(
+                        subtitle: const Text(
                           'Upload test results',
                           style: TextStyle(
                             color: Color.fromRGBO(89, 4, 255, 0),
                           ),
                         ),
-                        trailing: Icon(
+                        trailing: const Icon(
                           Icons.keyboard_arrow_right_rounded,
                           color: Color.fromRGBO(89, 4, 255, 0),
                         ),
+                        onTap: () {
+                          Navigator.pop(context);
+                        },
                       ),
                     ],
                   );
@@ -211,14 +223,14 @@ class _YourDataWidgetState extends State<YourDataWidget> {
         child: GestureDetector(
           onTap: () => FocusScope.of(context).unfocus(),
           child: Padding(
-            padding: EdgeInsetsDirectional.fromSTEB(10, 0, 10, 0),
+            padding: const EdgeInsetsDirectional.fromSTEB(10, 0, 10, 0),
             child: SingleChildScrollView(
               child: Column(
                 mainAxisSize: MainAxisSize.max,
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                   Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(10, 10, 0, 0),
+                    padding: const EdgeInsetsDirectional.fromSTEB(10, 10, 0, 0),
                     child: Row(
                       mainAxisSize: MainAxisSize.max,
                       children: [
@@ -234,7 +246,7 @@ class _YourDataWidgetState extends State<YourDataWidget> {
                     ),
                   ),
                   Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(0, 10, 0, 0),
+                    padding: const EdgeInsetsDirectional.fromSTEB(0, 10, 0, 0),
                     child: Container(
                       width: double.infinity,
                       height: 80,
@@ -260,7 +272,7 @@ class _YourDataWidgetState extends State<YourDataWidget> {
                     ),
                   ),
                   Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(0, 10, 0, 0),
+                    padding: const EdgeInsetsDirectional.fromSTEB(0, 10, 0, 0),
                     child: Container(
                       width: double.infinity,
                       height: 80,
@@ -286,7 +298,7 @@ class _YourDataWidgetState extends State<YourDataWidget> {
                     ),
                   ),
                   Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(10, 10, 0, 0),
+                    padding: const EdgeInsetsDirectional.fromSTEB(10, 10, 0, 0),
                     child: Row(
                       mainAxisSize: MainAxisSize.max,
                       children: [
@@ -302,7 +314,7 @@ class _YourDataWidgetState extends State<YourDataWidget> {
                     ),
                   ),
                   Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(0, 10, 0, 0),
+                    padding: const EdgeInsetsDirectional.fromSTEB(0, 10, 0, 0),
                     child: Container(
                       width: double.infinity,
                       height: 80,
@@ -328,7 +340,7 @@ class _YourDataWidgetState extends State<YourDataWidget> {
                     ),
                   ),
                   Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(0, 10, 0, 0),
+                    padding: const EdgeInsetsDirectional.fromSTEB(0, 10, 0, 0),
                     child: Container(
                       width: double.infinity,
                       height: 80,
@@ -354,7 +366,7 @@ class _YourDataWidgetState extends State<YourDataWidget> {
                     ),
                   ),
                   Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(10, 10, 0, 0),
+                    padding: const EdgeInsetsDirectional.fromSTEB(10, 10, 0, 0),
                     child: Row(
                       mainAxisSize: MainAxisSize.max,
                       children: [
@@ -370,7 +382,7 @@ class _YourDataWidgetState extends State<YourDataWidget> {
                     ),
                   ),
                   Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(0, 10, 0, 0),
+                    padding: const EdgeInsetsDirectional.fromSTEB(0, 10, 0, 0),
                     child: Container(
                       width: double.infinity,
                       height: 80,
@@ -396,7 +408,7 @@ class _YourDataWidgetState extends State<YourDataWidget> {
                     ),
                   ),
                   Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(0, 10, 0, 0),
+                    padding: const EdgeInsetsDirectional.fromSTEB(0, 10, 0, 0),
                     child: Container(
                       width: double.infinity,
                       height: 80,
@@ -422,7 +434,7 @@ class _YourDataWidgetState extends State<YourDataWidget> {
                     ),
                   ),
                   Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(0, 10, 0, 0),
+                    padding: const EdgeInsetsDirectional.fromSTEB(0, 10, 0, 0),
                     child: Container(
                       width: double.infinity,
                       height: 80,
