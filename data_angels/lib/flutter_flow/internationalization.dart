@@ -1,5 +1,4 @@
-import 'package:flutter/material.dart';
-import 'package:flutter/foundation.dart';
+import 'package:data_angels/index.dart';
 
 class FFLocalizations {
   FFLocalizations(this.locale);

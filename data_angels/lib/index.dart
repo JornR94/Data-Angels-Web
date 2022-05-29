@@ -13,3 +13,5 @@ export 'providers/providers_widget.dart' show ProvidersWidget;
 export 'your_data/your_data_widget.dart' show YourDataWidget;
 export 'profile/profile_widget.dart' show ProfileWidget;
 export 'signup/signup_widget.dart' show SignupWidget;
+
+export 'package:flutter/foundation.dart';
