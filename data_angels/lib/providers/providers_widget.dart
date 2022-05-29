@@ -21,20 +21,20 @@ class _ProvidersWidgetState extends State<ProvidersWidget> {
       appBar: AppBar(
         backgroundColor: FlutterFlowTheme.of(context).primaryColor,
         automaticallyImplyLeading: false,
-        leading: FlutterFlowIconButton(
-          borderColor: Colors.transparent,
-          borderRadius: 30,
-          borderWidth: 1,
-          buttonSize: 60,
-          icon: Icon(
-            Icons.chevron_left,
-            color: Colors.white,
-            size: 30,
-          ),
-          onPressed: () async {
-            Navigator.pop(context);
-          },
-        ),
+        // leading: FlutterFlowIconButton(
+        //   borderColor: Colors.transparent,
+        //   borderRadius: 30,
+        //   borderWidth: 1,
+        //   buttonSize: 60,
+        //   icon: Icon(
+        //     Icons.chevron_left,
+        //     color: Colors.white,
+        //     size: 30,
+        //   ),
+        //   onPressed: () async {
+        //     Navigator.pop(context);
+        //   },
+        // ),
         title: Text(
           'Network',
           style: FlutterFlowTheme.of(context).title2.override(

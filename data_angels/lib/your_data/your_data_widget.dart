@@ -21,21 +21,21 @@ class _YourDataWidgetState extends State<YourDataWidget> {
       appBar: AppBar(
         backgroundColor: FlutterFlowTheme.of(context).primaryColor,
         automaticallyImplyLeading: false,
-        leading: FlutterFlowIconButton(
-          borderColor: Colors.transparent,
-          borderRadius: 30,
-          borderWidth: 1,
-          buttonSize: 60,
-          fillColor: Colors.transparent,
-          icon: Icon(
-            Icons.chevron_left,
-            color: Colors.white,
-            size: 30,
-          ),
-          onPressed: () async {
-            Navigator.pop(context);
-          },
-        ),
+        // leading: FlutterFlowIconButton(
+        //   borderColor: Colors.transparent,
+        //   borderRadius: 30,
+        //   borderWidth: 1,
+        //   buttonSize: 60,
+        //   fillColor: Colors.transparent,
+        //   icon: Icon(
+        //     Icons.chevron_left,
+        //     color: Colors.white,
+        //     size: 30,
+        //   ),
+        // onPressed: () async {
+        //   Navigator.pop(context);
+        // },
+        // ),
         title: Text(
           'Your Data',
           textAlign: TextAlign.start,
@@ -63,7 +63,7 @@ class _YourDataWidgetState extends State<YourDataWidget> {
                 shape: const RoundedRectangleBorder(
                   borderRadius: BorderRadius.vertical(
                     top: const Radius.circular(
-                      14,
+                      20,
                     ),
                   ),
                 ),
@@ -111,10 +111,90 @@ class _YourDataWidgetState extends State<YourDataWidget> {
                       const ListTile(
                         leading: Icon(
                           Icons.description_rounded,
+                          color: Color.fromRGBO(89, 4, 255, 0),
                         ),
-                        title: Text('Documents'),
-                        subtitle: Text('Upload official health documents'),
-                        trailing: Icon(Icons.keyboard_arrow_right_rounded),
+                        title: Text(
+                          'Documents',
+                          style: TextStyle(
+                            color: Color.fromRGBO(30, 30, 30, 0),
+                          ),
+                        ),
+                        subtitle: Text(
+                          'Upload official health documents',
+                          style: TextStyle(
+                            color: Color.fromRGBO(89, 4, 255, 0),
+                          ),
+                        ),
+                        trailing: Icon(
+                          Icons.keyboard_arrow_right_rounded,
+                          color: Color.fromRGBO(89, 4, 255, 0),
+                        ),
+                      ),
+                      const ListTile(
+                        leading: Icon(
+                          Icons.devices,
+                          color: Color.fromRGBO(89, 4, 255, 0),
+                        ),
+                        title: Text(
+                          'App Information',
+                          style: TextStyle(
+                            color: Color.fromRGBO(30, 30, 30, 0),
+                          ),
+                        ),
+                        subtitle: Text(
+                          'Sync your favorite health apps',
+                          style: TextStyle(
+                            color: Color.fromRGBO(89, 4, 255, 0),
+                          ),
+                        ),
+                        trailing: Icon(
+                          Icons.keyboard_arrow_right_rounded,
+                          color: Color.fromRGBO(89, 4, 255, 0),
+                        ),
+                      ),
+                      const ListTile(
+                        leading: Icon(
+                          Icons.portrait_rounded,
+                          color: Color.fromRGBO(89, 4, 255, 0),
+                        ),
+                        title: Text(
+                          'Health Details',
+                          style: TextStyle(
+                            color: Color.fromRGBO(30, 30, 30, 0),
+                          ),
+                        ),
+                        subtitle: Text(
+                          'Enter body and activity metrics',
+                          style: TextStyle(
+                            color: Color.fromRGBO(89, 4, 255, 0),
+                          ),
+                        ),
+                        trailing: Icon(
+                          Icons.keyboard_arrow_right_rounded,
+                          color: Color.fromRGBO(89, 4, 255, 0),
+                        ),
+                      ),
+                      const ListTile(
+                        leading: Icon(
+                          Icons.local_hospital_rounded,
+                          color: Color.fromRGBO(89, 4, 255, 0),
+                        ),
+                        title: Text(
+                          'Genetic Data',
+                          style: TextStyle(
+                            color: Color.fromRGBO(30, 30, 30, 0),
+                          ),
+                        ),
+                        subtitle: Text(
+                          'Upload test results',
+                          style: TextStyle(
+                            color: Color.fromRGBO(89, 4, 255, 0),
+                          ),
+                        ),
+                        trailing: Icon(
+                          Icons.keyboard_arrow_right_rounded,
+                          color: Color.fromRGBO(89, 4, 255, 0),
+                        ),
                       ),
                     ],
                   );

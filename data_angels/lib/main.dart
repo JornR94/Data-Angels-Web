@@ -7,6 +7,67 @@ void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
   await FlutterFlowTheme.initialize();
+//   void popBottomSheet({
+//   required final List<Widget> items,
+//   required final BuildContext context,
+// })
+// {
+//   showModalBottomSheet<Table>(
+//     context: context,
+//     shape: const RoundedRectangleBorder(
+//       borderRadius: BorderRadius.vertical(
+//         top: const Radius.circular(
+//           14,
+//         ),
+//       ),
+//     ),
+//     builder: (final BuildContext context) {
+//       return Column(
+//         mainAxisSize: MainAxisSize.min,
+//         children: <Widget>[
+//           const SizedBox(
+//             height: 8,
+//           ),
+//           Row(
+//             children: <Widget>[
+//               Expanded(
+//                 flex: 46,
+//                 child: Container(
+//                   color: Colors.transparent,
+//                   height: 4,
+//                   width: double.infinity,
+//                 ),
+//               ),
+//               Expanded(
+//                 flex: 8,
+//                 child: Container(
+//                   decoration: BoxDecoration(
+//                     borderRadius: BorderRadius.circular(4),
+//                     color: Colors.grey,
+//                   ),
+//                   height: 4,
+//                   width: double.infinity,
+//                 ),
+//               ),
+//               Expanded(
+//                 flex: 46,
+//                 child: Container(
+//                   color: Colors.transparent,
+//                   height: 4,
+//                   width: double.infinity,
+//                 ),
+//               ),
+//             ],
+//           ),
+//           const SizedBox(
+//             height: 8,
+//           ),
+//           ...items,
+//         ],
+//       );
+//     },
+//   );
+// }
 
   runApp(MyApp());
 }
