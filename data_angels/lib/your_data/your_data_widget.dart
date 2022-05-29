@@ -58,7 +58,68 @@ class _YourDataWidgetState extends State<YourDataWidget> {
               size: 30,
             ),
             onPressed: () async {
-              Navigator.pop(context);
+              showModalBottomSheet<Table>(
+                context: context,
+                shape: const RoundedRectangleBorder(
+                  borderRadius: BorderRadius.vertical(
+                    top: const Radius.circular(
+                      14,
+                    ),
+                  ),
+                ),
+                builder: (final BuildContext context) {
+                  return Column(
+                    mainAxisSize: MainAxisSize.min,
+                    children: <Widget>[
+                      const SizedBox(
+                        height: 8,
+                      ),
+                      Row(
+                        children: <Widget>[
+                          Expanded(
+                            flex: 46,
+                            child: Container(
+                              color: Colors.transparent,
+                              height: 4,
+                              width: double.infinity,
+                            ),
+                          ),
+                          Expanded(
+                            flex: 8,
+                            child: Container(
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(4),
+                                color: Colors.grey,
+                              ),
+                              height: 4,
+                              width: double.infinity,
+                            ),
+                          ),
+                          Expanded(
+                            flex: 46,
+                            child: Container(
+                              color: Colors.transparent,
+                              height: 4,
+                              width: double.infinity,
+                            ),
+                          ),
+                        ],
+                      ),
+                      const SizedBox(
+                        height: 8,
+                      ),
+                      const ListTile(
+                        leading: Icon(
+                          Icons.description_rounded,
+                        ),
+                        title: Text('Documents'),
+                        subtitle: Text('Upload official health documents'),
+                        trailing: Icon(Icons.keyboard_arrow_right_rounded),
+                      ),
+                    ],
+                  );
+                },
+              );
             },
           ),
         ],

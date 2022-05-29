@@ -54,7 +54,7 @@ class _SignupWidgetState extends State<SignupWidget> {
           borderRadius: 30,
           borderWidth: 1,
           buttonSize: 60,
-          fillColor: Colors.black,
+          fillColor: Colors.transparent,
           icon: Icon(
             Icons.chevron_left,
             color: Colors.white,
