@@ -76,7 +76,7 @@ class _SignupWidgetState extends State<SignupWidget> {
         centerTitle: true,
         elevation: 2,
       ),
-      backgroundColor: Colors.white,
+      backgroundColor: FlutterFlowTheme.of(context).primaryColor,
       body: SafeArea(
         child: GestureDetector(
           onTap: () => FocusScope.of(context).unfocus(),
@@ -102,6 +102,10 @@ class _SignupWidgetState extends State<SignupWidget> {
                           decoration: InputDecoration(
                             labelText: 'First Name',
                             hintText: 'First Name',
+                            hintStyle: TextStyle(
+                                fontSize: 14.0,
+                                fontWeight: FontWeight.w800,
+                                color: Colors.grey),
                             enabledBorder: UnderlineInputBorder(
                               borderSide: BorderSide(
                                 color:
@@ -149,6 +153,10 @@ class _SignupWidgetState extends State<SignupWidget> {
                           decoration: InputDecoration(
                             labelText: 'Last Name',
                             hintText: 'Last Name',
+                            hintStyle: TextStyle(
+                                fontSize: 14.0,
+                                fontWeight: FontWeight.w800,
+                                color: Colors.grey),
                             enabledBorder: UnderlineInputBorder(
                               borderSide: BorderSide(
                                 color:
@@ -196,6 +204,10 @@ class _SignupWidgetState extends State<SignupWidget> {
                           decoration: InputDecoration(
                             labelText: 'Date of Birth',
                             hintText: 'Date of Birth',
+                            hintStyle: TextStyle(
+                                fontSize: 14.0,
+                                fontWeight: FontWeight.w800,
+                                color: Colors.grey),
                             enabledBorder: UnderlineInputBorder(
                               borderSide: BorderSide(
                                 color:
@@ -244,6 +256,10 @@ class _SignupWidgetState extends State<SignupWidget> {
                           decoration: InputDecoration(
                             labelText: 'Email',
                             hintText: 'Email',
+                            hintStyle: TextStyle(
+                                fontSize: 14.0,
+                                fontWeight: FontWeight.w800,
+                                color: Colors.grey),
                             enabledBorder: UnderlineInputBorder(
                               borderSide: BorderSide(
                                 color:
@@ -292,6 +308,10 @@ class _SignupWidgetState extends State<SignupWidget> {
                           decoration: InputDecoration(
                             labelText: 'Number',
                             hintText: 'Number',
+                            hintStyle: TextStyle(
+                                fontSize: 14.0,
+                                fontWeight: FontWeight.w800,
+                                color: Colors.grey),
                             enabledBorder: UnderlineInputBorder(
                               borderSide: BorderSide(
                                 color:
@@ -323,7 +343,7 @@ class _SignupWidgetState extends State<SignupWidget> {
                   ),
                 ),
                 Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(0, 20, 0, 0),
+                  padding: EdgeInsetsDirectional.fromSTEB(0, 20, 0, 5),
                   child: Row(
                     mainAxisSize: MainAxisSize.max,
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -336,13 +356,14 @@ class _SignupWidgetState extends State<SignupWidget> {
                         ),
                         child: Signature(
                           controller: signatureController,
-                          backgroundColor: Color(0x334B39EF),
+                          backgroundColor: Color.fromARGB(51, 67, 67, 67),
                           height: 120,
                         ),
                       ),
                     ],
                   ),
                 ),
+                Text("Signature", textAlign: TextAlign.center),
                 Padding(
                   padding: EdgeInsetsDirectional.fromSTEB(0, 20, 0, 0),
                   child: Row(

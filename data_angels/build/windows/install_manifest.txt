@@ -2,6 +2,7 @@ D:/Projectjes/Data Angels/Data-Angels-Web/Data-Angels-Web/data_angels/build/wind
 D:/Projectjes/Data Angels/Data-Angels-Web/Data-Angels-Web/data_angels/build/windows/runner/Debug/flutter_windows.dll
 D:/Projectjes/Data Angels/Data-Angels-Web/Data-Angels-Web/data_angels/build/windows/runner/Debug/url_launcher_windows_plugin.dll
 D:/Projectjes/Data Angels/Data-Angels-Web/Data-Angels-Web/data_angels/build/windows/runner/Debug/data/flutter_assets/AssetManifest.json
+D:/Projectjes/Data Angels/Data-Angels-Web/Data-Angels-Web/data_angels/build/windows/runner/Debug/data/flutter_assets/assets/fitness_tracker_logo.jpg
 D:/Projectjes/Data Angels/Data-Angels-Web/Data-Angels-Web/data_angels/build/windows/runner/Debug/data/flutter_assets/FontManifest.json
 D:/Projectjes/Data Angels/Data-Angels-Web/Data-Angels-Web/data_angels/build/windows/runner/Debug/data/flutter_assets/fonts/MaterialIcons-Regular.otf
 D:/Projectjes/Data Angels/Data-Angels-Web/Data-Angels-Web/data_angels/build/windows/runner/Debug/data/flutter_assets/kernel_blob.bin

@@ -110,24 +110,24 @@ class _YourDataWidgetState extends State<YourDataWidget> {
                       ),
                       ListTile(
                         leading: const Icon(
-                          Icons.description_rounded,
-                          color: Color.fromRGBO(89, 4, 255, 0),
+                          Icons.description_outlined,
+                          color: Color.fromRGBO(89, 4, 255, 1),
                         ),
                         title: const Text(
                           'Documents',
                           style: TextStyle(
-                            color: Color.fromRGBO(30, 30, 30, 0),
+                            color: Color.fromRGBO(30, 30, 30, 1),
                           ),
                         ),
                         subtitle: const Text(
                           'Upload official health documents',
                           style: TextStyle(
-                            color: Color.fromRGBO(89, 4, 255, 0),
+                            color: Color.fromRGBO(89, 4, 255, 1),
                           ),
                         ),
                         trailing: const Icon(
                           Icons.keyboard_arrow_right_rounded,
-                          color: Color.fromRGBO(89, 4, 255, 0),
+                          color: Color.fromRGBO(89, 4, 255, 1),
                         ),
                         onTap: () {
                           Navigator.pop(context);
@@ -136,23 +136,23 @@ class _YourDataWidgetState extends State<YourDataWidget> {
                       ListTile(
                         leading: const Icon(
                           Icons.devices,
-                          color: Color.fromRGBO(89, 4, 255, 0),
+                          color: Color.fromRGBO(89, 4, 255, 1),
                         ),
                         title: const Text(
                           'App Information',
                           style: TextStyle(
-                            color: Color.fromRGBO(30, 30, 30, 0),
+                            color: Color.fromRGBO(30, 30, 30, 1),
                           ),
                         ),
                         subtitle: const Text(
                           'Sync your favorite health apps',
                           style: TextStyle(
-                            color: Color.fromRGBO(89, 4, 255, 0),
+                            color: Color.fromRGBO(89, 4, 255, 1),
                           ),
                         ),
                         trailing: const Icon(
                           Icons.keyboard_arrow_right_rounded,
-                          color: Color.fromRGBO(89, 4, 255, 0),
+                          color: Color.fromRGBO(89, 4, 255, 1),
                         ),
                         onTap: () {
                           Navigator.pop(context);
@@ -161,23 +161,23 @@ class _YourDataWidgetState extends State<YourDataWidget> {
                       ListTile(
                         leading: const Icon(
                           Icons.portrait_rounded,
-                          color: Color.fromRGBO(89, 4, 255, 0),
+                          color: Color.fromRGBO(89, 4, 255, 1),
                         ),
                         title: const Text(
                           'Health Details',
                           style: TextStyle(
-                            color: Color.fromRGBO(30, 30, 30, 0),
+                            color: Color.fromRGBO(30, 30, 30, 1),
                           ),
                         ),
                         subtitle: const Text(
                           'Enter body and activity metrics',
                           style: TextStyle(
-                            color: Color.fromRGBO(89, 4, 255, 0),
+                            color: Color.fromRGBO(89, 4, 255, 1),
                           ),
                         ),
                         trailing: const Icon(
                           Icons.keyboard_arrow_right_rounded,
-                          color: Color.fromRGBO(89, 4, 255, 0),
+                          color: Color.fromRGBO(89, 4, 255, 1),
                         ),
                         onTap: () {
                           Navigator.pop(context);
@@ -185,24 +185,24 @@ class _YourDataWidgetState extends State<YourDataWidget> {
                       ),
                       ListTile(
                         leading: const Icon(
-                          Icons.local_hospital_rounded,
-                          color: Color.fromRGBO(89, 4, 255, 0),
+                          Icons.local_hospital_outlined,
+                          color: Color.fromRGBO(89, 4, 255, 1),
                         ),
                         title: const Text(
                           'Genetic Data',
                           style: TextStyle(
-                            color: Color.fromRGBO(30, 30, 30, 0),
+                            color: Color.fromRGBO(30, 30, 30, 1),
                           ),
                         ),
                         subtitle: const Text(
                           'Upload test results',
                           style: TextStyle(
-                            color: Color.fromRGBO(89, 4, 255, 0),
+                            color: Color.fromRGBO(89, 4, 255, 1),
                           ),
                         ),
                         trailing: const Icon(
                           Icons.keyboard_arrow_right_rounded,
-                          color: Color.fromRGBO(89, 4, 255, 0),
+                          color: Color.fromRGBO(89, 4, 255, 1),
                         ),
                         onTap: () {
                           Navigator.pop(context);

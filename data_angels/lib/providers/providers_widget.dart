@@ -36,7 +36,7 @@ class _ProvidersWidgetState extends State<ProvidersWidget> {
         //   },
         // ),
         title: Text(
-          'Network',
+          'Connect',
           style: FlutterFlowTheme.of(context).title2.override(
                 fontFamily: 'Poppins',
                 color: Colors.white,
@@ -49,7 +49,7 @@ class _ProvidersWidgetState extends State<ProvidersWidget> {
             borderRadius: 30,
             borderWidth: 1,
             buttonSize: 60,
-            icon: Icon(
+            icon: const Icon(
               Icons.add_business_rounded,
               color: Colors.white,
               size: 30,
@@ -67,244 +67,1241 @@ class _ProvidersWidgetState extends State<ProvidersWidget> {
         child: GestureDetector(
           onTap: () => FocusScope.of(context).unfocus(),
           child: Padding(
-            padding: EdgeInsetsDirectional.fromSTEB(10, 0, 10, 0),
-            child: SingleChildScrollView(
-              child: Column(
-                mainAxisSize: MainAxisSize.max,
-                mainAxisAlignment: MainAxisAlignment.start,
-                children: [
-                  Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(10, 10, 0, 0),
-                    child: Row(
-                      mainAxisSize: MainAxisSize.max,
-                      children: [
-                        Text(
-                          'Healthcare',
-                          style:
-                              FlutterFlowTheme.of(context).bodyText1.override(
-                                    fontFamily: 'Poppins',
-                                    fontSize: 18,
+            padding: const EdgeInsetsDirectional.fromSTEB(20, 60, 20, 0),
+            child: Column(
+              mainAxisSize: MainAxisSize.max,
+              children: [
+                Expanded(
+                  child: GridView(
+                    padding: EdgeInsets.zero,
+                    gridDelegate:
+                        const SliverGridDelegateWithFixedCrossAxisCount(
+                      crossAxisCount: 3,
+                      crossAxisSpacing: 20,
+                      mainAxisSpacing: 20,
+                      childAspectRatio: 1,
+                    ),
+                    scrollDirection: Axis.vertical,
+                    children: [
+                      GestureDetector(
+                        onTap: () {
+                          showModalBottomSheet<Table>(
+                            context: context,
+                            shape: const RoundedRectangleBorder(
+                              borderRadius: BorderRadius.vertical(
+                                top: Radius.circular(
+                                  20,
+                                ),
+                              ),
+                            ),
+                            builder: (final BuildContext context) {
+                              return Column(
+                                mainAxisSize: MainAxisSize.min,
+                                children: <Widget>[
+                                  const SizedBox(
+                                    height: 8,
                                   ),
-                        ),
-                      ],
-                    ),
-                  ),
-                  Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(0, 10, 0, 0),
-                    child: Container(
-                      width: double.infinity,
-                      height: 80,
-                      decoration: BoxDecoration(
-                        color: FlutterFlowTheme.of(context).primaryColor,
-                        image: DecorationImage(
-                          fit: BoxFit.cover,
-                          image: Image.network(
-                            '',
-                          ).image,
-                        ),
-                        borderRadius: BorderRadius.circular(20),
-                      ),
-                      child: ClipRRect(
-                        borderRadius: BorderRadius.circular(20),
-                        child: Image.network(
-                          'https://picsum.photos/seed/137/600',
-                          width: 100,
-                          height: 100,
-                          fit: BoxFit.cover,
-                        ),
-                      ),
-                    ),
-                  ),
-                  Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(0, 10, 0, 0),
-                    child: Container(
-                      width: double.infinity,
-                      height: 80,
-                      decoration: BoxDecoration(
-                        color: FlutterFlowTheme.of(context).primaryColor,
-                        image: DecorationImage(
-                          fit: BoxFit.cover,
-                          image: Image.network(
-                            '',
-                          ).image,
-                        ),
-                        borderRadius: BorderRadius.circular(20),
-                      ),
-                      child: ClipRRect(
-                        borderRadius: BorderRadius.circular(20),
-                        child: Image.network(
-                          'https://picsum.photos/seed/767/600',
-                          width: 100,
-                          height: 100,
-                          fit: BoxFit.cover,
-                        ),
-                      ),
-                    ),
-                  ),
-                  Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(10, 10, 0, 0),
-                    child: Row(
-                      mainAxisSize: MainAxisSize.max,
-                      children: [
-                        Text(
-                          'Medical Data',
-                          style:
-                              FlutterFlowTheme.of(context).bodyText1.override(
-                                    fontFamily: 'Poppins',
-                                    fontSize: 18,
+                                  Row(
+                                    children: <Widget>[
+                                      Expanded(
+                                        flex: 46,
+                                        child: Container(
+                                          color: Colors.transparent,
+                                          height: 4,
+                                          width: double.infinity,
+                                        ),
+                                      ),
+                                      Expanded(
+                                        flex: 8,
+                                        child: Container(
+                                          decoration: BoxDecoration(
+                                            borderRadius:
+                                                BorderRadius.circular(4),
+                                            color: Colors.grey,
+                                          ),
+                                          height: 4,
+                                          width: double.infinity,
+                                        ),
+                                      ),
+                                      Expanded(
+                                        flex: 46,
+                                        child: Container(
+                                          color: Colors.transparent,
+                                          height: 4,
+                                          width: double.infinity,
+                                        ),
+                                      ),
+                                    ],
                                   ),
-                        ),
-                      ],
-                    ),
-                  ),
-                  Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(0, 10, 0, 0),
-                    child: Container(
-                      width: double.infinity,
-                      height: 80,
-                      decoration: BoxDecoration(
-                        color: FlutterFlowTheme.of(context).primaryColor,
-                        image: DecorationImage(
-                          fit: BoxFit.cover,
-                          image: Image.network(
-                            '',
-                          ).image,
-                        ),
-                        borderRadius: BorderRadius.circular(20),
-                      ),
-                      child: ClipRRect(
-                        borderRadius: BorderRadius.circular(20),
-                        child: Image.network(
-                          'https://picsum.photos/seed/396/600',
-                          width: 100,
-                          height: 100,
-                          fit: BoxFit.cover,
-                        ),
-                      ),
-                    ),
-                  ),
-                  Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(0, 10, 0, 0),
-                    child: Container(
-                      width: double.infinity,
-                      height: 80,
-                      decoration: BoxDecoration(
-                        color: FlutterFlowTheme.of(context).primaryColor,
-                        image: DecorationImage(
-                          fit: BoxFit.cover,
-                          image: Image.network(
-                            '',
-                          ).image,
-                        ),
-                        borderRadius: BorderRadius.circular(20),
-                      ),
-                      child: ClipRRect(
-                        borderRadius: BorderRadius.circular(20),
-                        child: Image.network(
-                          'https://picsum.photos/seed/563/600',
-                          width: 100,
-                          height: 100,
-                          fit: BoxFit.cover,
-                        ),
-                      ),
-                    ),
-                  ),
-                  Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(10, 10, 0, 0),
-                    child: Row(
-                      mainAxisSize: MainAxisSize.max,
-                      children: [
-                        Text(
-                          'Fitness',
-                          style:
-                              FlutterFlowTheme.of(context).bodyText1.override(
-                                    fontFamily: 'Poppins',
-                                    fontSize: 18,
+                                  const SizedBox(
+                                    height: 8,
                                   ),
+                                  Text(
+                                    'Apple Health App',
+                                    textAlign: TextAlign.center,
+                                    style: TextStyle(
+                                        color: Color.fromRGBO(89, 4, 255, 1),
+                                        fontSize: 24),
+                                  ),
+                                  ListTile(
+                                    leading: const Icon(
+                                      Icons.file_upload,
+                                      color: Color.fromRGBO(89, 4, 255, 1),
+                                    ),
+                                    title: const Text(
+                                      'File',
+                                      style: TextStyle(
+                                        color: Color.fromRGBO(30, 30, 30, 1),
+                                      ),
+                                    ),
+                                    onTap: () {
+                                      Navigator.pop(context);
+                                    },
+                                  ),
+                                  ListTile(
+                                    leading: const Icon(
+                                      Icons.scanner,
+                                      color: Color.fromRGBO(89, 4, 255, 1),
+                                    ),
+                                    title: const Text(
+                                      'Scan',
+                                      style: TextStyle(
+                                        color: Color.fromRGBO(30, 30, 30, 1),
+                                      ),
+                                    ),
+                                    onTap: () {
+                                      Navigator.pop(context);
+                                    },
+                                  ),
+                                  ListTile(
+                                    leading: const Icon(
+                                      Icons.link,
+                                      color: Color.fromRGBO(89, 4, 255, 1),
+                                    ),
+                                    title: const Text(
+                                      'Link',
+                                      style: TextStyle(
+                                        color: Color.fromRGBO(30, 30, 30, 1),
+                                      ),
+                                    ),
+                                    onTap: () {
+                                      Navigator.pop(context);
+                                    },
+                                  ),
+                                  ListTile(
+                                    leading: const Icon(
+                                      Icons.add_to_drive,
+                                      color: Color.fromRGBO(89, 4, 255, 1),
+                                    ),
+                                    title: const Text(
+                                      'Google Drive',
+                                      style: TextStyle(
+                                        color: Color.fromRGBO(30, 30, 30, 1),
+                                      ),
+                                    ),
+                                    onTap: () {
+                                      Navigator.pop(context);
+                                    },
+                                  ),
+                                ],
+                              );
+                            },
+                          );
+                        },
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(20),
+                          child: Image.asset(
+                            'assets/logo_apple_health.png',
+                            width: 75,
+                            height: 75,
+                            fit: BoxFit.cover,
+                          ),
                         ),
-                      ],
-                    ),
+                      ),
+                      GestureDetector(
+                        onTap: () {
+                          showModalBottomSheet<Table>(
+                            context: context,
+                            shape: const RoundedRectangleBorder(
+                              borderRadius: BorderRadius.vertical(
+                                top: Radius.circular(
+                                  20,
+                                ),
+                              ),
+                            ),
+                            builder: (final BuildContext context) {
+                              return Column(
+                                mainAxisSize: MainAxisSize.min,
+                                children: <Widget>[
+                                  const SizedBox(
+                                    height: 8,
+                                  ),
+                                  Row(
+                                    children: <Widget>[
+                                      Expanded(
+                                        flex: 46,
+                                        child: Container(
+                                          color: Colors.transparent,
+                                          height: 4,
+                                          width: double.infinity,
+                                        ),
+                                      ),
+                                      Expanded(
+                                        flex: 8,
+                                        child: Container(
+                                          decoration: BoxDecoration(
+                                            borderRadius:
+                                                BorderRadius.circular(4),
+                                            color: Colors.grey,
+                                          ),
+                                          height: 4,
+                                          width: double.infinity,
+                                        ),
+                                      ),
+                                      Expanded(
+                                        flex: 46,
+                                        child: Container(
+                                          color: Colors.transparent,
+                                          height: 4,
+                                          width: double.infinity,
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                  const SizedBox(
+                                    height: 8,
+                                  ),
+                                  Text(
+                                    'Fitness Tracker',
+                                    textAlign: TextAlign.center,
+                                    style: TextStyle(
+                                        color: Color.fromRGBO(89, 4, 255, 1),
+                                        fontSize: 24),
+                                  ),
+                                  ListTile(
+                                    leading: const Icon(
+                                      Icons.file_upload,
+                                      color: Color.fromRGBO(89, 4, 255, 1),
+                                    ),
+                                    title: const Text(
+                                      'File',
+                                      style: TextStyle(
+                                        color: Color.fromRGBO(30, 30, 30, 1),
+                                      ),
+                                    ),
+                                    onTap: () {
+                                      Navigator.pop(context);
+                                    },
+                                  ),
+                                  ListTile(
+                                    leading: const Icon(
+                                      Icons.scanner,
+                                      color: Color.fromRGBO(89, 4, 255, 1),
+                                    ),
+                                    title: const Text(
+                                      'Scan',
+                                      style: TextStyle(
+                                        color: Color.fromRGBO(30, 30, 30, 1),
+                                      ),
+                                    ),
+                                    onTap: () {
+                                      Navigator.pop(context);
+                                    },
+                                  ),
+                                  ListTile(
+                                    leading: const Icon(
+                                      Icons.link,
+                                      color: Color.fromRGBO(89, 4, 255, 1),
+                                    ),
+                                    title: const Text(
+                                      'Link',
+                                      style: TextStyle(
+                                        color: Color.fromRGBO(30, 30, 30, 1),
+                                      ),
+                                    ),
+                                    onTap: () {
+                                      Navigator.pop(context);
+                                    },
+                                  ),
+                                  ListTile(
+                                    leading: const Icon(
+                                      Icons.add_to_drive,
+                                      color: Color.fromRGBO(89, 4, 255, 1),
+                                    ),
+                                    title: const Text(
+                                      'Google Drive',
+                                      style: TextStyle(
+                                        color: Color.fromRGBO(30, 30, 30, 1),
+                                      ),
+                                    ),
+                                    onTap: () {
+                                      Navigator.pop(context);
+                                    },
+                                  ),
+                                ],
+                              );
+                            },
+                          );
+                        },
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(20),
+                          child: Image.asset(
+                            'assets/fitness_tracker_logo.jpg',
+                            width: 75,
+                            height: 75,
+                            fit: BoxFit.cover,
+                          ),
+                        ),
+                      ),
+                      GestureDetector(
+                        onTap: () {
+                          showModalBottomSheet<Table>(
+                            context: context,
+                            shape: const RoundedRectangleBorder(
+                              borderRadius: BorderRadius.vertical(
+                                top: Radius.circular(
+                                  20,
+                                ),
+                              ),
+                            ),
+                            builder: (final BuildContext context) {
+                              return Column(
+                                mainAxisSize: MainAxisSize.min,
+                                children: <Widget>[
+                                  const SizedBox(
+                                    height: 8,
+                                  ),
+                                  Row(
+                                    children: <Widget>[
+                                      Expanded(
+                                        flex: 46,
+                                        child: Container(
+                                          color: Colors.transparent,
+                                          height: 4,
+                                          width: double.infinity,
+                                        ),
+                                      ),
+                                      Expanded(
+                                        flex: 8,
+                                        child: Container(
+                                          decoration: BoxDecoration(
+                                            borderRadius:
+                                                BorderRadius.circular(4),
+                                            color: Colors.grey,
+                                          ),
+                                          height: 4,
+                                          width: double.infinity,
+                                        ),
+                                      ),
+                                      Expanded(
+                                        flex: 46,
+                                        child: Container(
+                                          color: Colors.transparent,
+                                          height: 4,
+                                          width: double.infinity,
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                  const SizedBox(
+                                    height: 8,
+                                  ),
+                                  Text(
+                                    'Headspace',
+                                    textAlign: TextAlign.center,
+                                    style: TextStyle(
+                                        color: Color.fromRGBO(89, 4, 255, 1),
+                                        fontSize: 24),
+                                  ),
+                                  ListTile(
+                                    leading: const Icon(
+                                      Icons.file_upload,
+                                      color: Color.fromRGBO(89, 4, 255, 1),
+                                    ),
+                                    title: const Text(
+                                      'File',
+                                      style: TextStyle(
+                                        color: Color.fromRGBO(30, 30, 30, 1),
+                                      ),
+                                    ),
+                                    onTap: () {
+                                      Navigator.pop(context);
+                                    },
+                                  ),
+                                  ListTile(
+                                    leading: const Icon(
+                                      Icons.scanner,
+                                      color: Color.fromRGBO(89, 4, 255, 1),
+                                    ),
+                                    title: const Text(
+                                      'Scan',
+                                      style: TextStyle(
+                                        color: Color.fromRGBO(30, 30, 30, 1),
+                                      ),
+                                    ),
+                                    onTap: () {
+                                      Navigator.pop(context);
+                                    },
+                                  ),
+                                  ListTile(
+                                    leading: const Icon(
+                                      Icons.link,
+                                      color: Color.fromRGBO(89, 4, 255, 1),
+                                    ),
+                                    title: const Text(
+                                      'Link',
+                                      style: TextStyle(
+                                        color: Color.fromRGBO(30, 30, 30, 1),
+                                      ),
+                                    ),
+                                    onTap: () {
+                                      Navigator.pop(context);
+                                    },
+                                  ),
+                                  ListTile(
+                                    leading: const Icon(
+                                      Icons.add_to_drive,
+                                      color: Color.fromRGBO(89, 4, 255, 1),
+                                    ),
+                                    title: const Text(
+                                      'Google Drive',
+                                      style: TextStyle(
+                                        color: Color.fromRGBO(30, 30, 30, 1),
+                                      ),
+                                    ),
+                                    onTap: () {
+                                      Navigator.pop(context);
+                                    },
+                                  ),
+                                ],
+                              );
+                            },
+                          );
+                        },
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(20),
+                          child: Image.asset(
+                            'assets/logo_headspace.png',
+                            width: 75,
+                            height: 75,
+                            fit: BoxFit.cover,
+                          ),
+                        ),
+                      ),
+                      GestureDetector(
+                        onTap: () {
+                          showModalBottomSheet<Table>(
+                            context: context,
+                            shape: const RoundedRectangleBorder(
+                              borderRadius: BorderRadius.vertical(
+                                top: Radius.circular(
+                                  20,
+                                ),
+                              ),
+                            ),
+                            builder: (final BuildContext context) {
+                              return Column(
+                                mainAxisSize: MainAxisSize.min,
+                                children: <Widget>[
+                                  const SizedBox(
+                                    height: 8,
+                                  ),
+                                  Row(
+                                    children: <Widget>[
+                                      Expanded(
+                                        flex: 46,
+                                        child: Container(
+                                          color: Colors.transparent,
+                                          height: 4,
+                                          width: double.infinity,
+                                        ),
+                                      ),
+                                      Expanded(
+                                        flex: 8,
+                                        child: Container(
+                                          decoration: BoxDecoration(
+                                            borderRadius:
+                                                BorderRadius.circular(4),
+                                            color: Colors.grey,
+                                          ),
+                                          height: 4,
+                                          width: double.infinity,
+                                        ),
+                                      ),
+                                      Expanded(
+                                        flex: 46,
+                                        child: Container(
+                                          color: Colors.transparent,
+                                          height: 4,
+                                          width: double.infinity,
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                  const SizedBox(
+                                    height: 8,
+                                  ),
+                                  Text(
+                                    'Apple Health App',
+                                    textAlign: TextAlign.center,
+                                    style: TextStyle(
+                                        color: Color.fromRGBO(89, 4, 255, 1),
+                                        fontSize: 24),
+                                  ),
+                                  ListTile(
+                                    leading: const Icon(
+                                      Icons.file_upload,
+                                      color: Color.fromRGBO(89, 4, 255, 1),
+                                    ),
+                                    title: const Text(
+                                      'File',
+                                      style: TextStyle(
+                                        color: Color.fromRGBO(30, 30, 30, 1),
+                                      ),
+                                    ),
+                                    onTap: () {
+                                      Navigator.pop(context);
+                                    },
+                                  ),
+                                  ListTile(
+                                    leading: const Icon(
+                                      Icons.scanner,
+                                      color: Color.fromRGBO(89, 4, 255, 1),
+                                    ),
+                                    title: const Text(
+                                      'Scan',
+                                      style: TextStyle(
+                                        color: Color.fromRGBO(30, 30, 30, 1),
+                                      ),
+                                    ),
+                                    onTap: () {
+                                      Navigator.pop(context);
+                                    },
+                                  ),
+                                  ListTile(
+                                    leading: const Icon(
+                                      Icons.link,
+                                      color: Color.fromRGBO(89, 4, 255, 1),
+                                    ),
+                                    title: const Text(
+                                      'Link',
+                                      style: TextStyle(
+                                        color: Color.fromRGBO(30, 30, 30, 1),
+                                      ),
+                                    ),
+                                    onTap: () {
+                                      Navigator.pop(context);
+                                    },
+                                  ),
+                                  ListTile(
+                                    leading: const Icon(
+                                      Icons.add_to_drive,
+                                      color: Color.fromRGBO(89, 4, 255, 1),
+                                    ),
+                                    title: const Text(
+                                      'Google Drive',
+                                      style: TextStyle(
+                                        color: Color.fromRGBO(30, 30, 30, 1),
+                                      ),
+                                    ),
+                                    onTap: () {
+                                      Navigator.pop(context);
+                                    },
+                                  ),
+                                ],
+                              );
+                            },
+                          );
+                        },
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(20),
+                          child: Image.asset(
+                            'assets/logo_1.jpg',
+                            width: 75,
+                            height: 75,
+                            fit: BoxFit.cover,
+                          ),
+                        ),
+                      ),
+                      GestureDetector(
+                        onTap: () {
+                          showModalBottomSheet<Table>(
+                            context: context,
+                            shape: const RoundedRectangleBorder(
+                              borderRadius: BorderRadius.vertical(
+                                top: Radius.circular(
+                                  20,
+                                ),
+                              ),
+                            ),
+                            builder: (final BuildContext context) {
+                              return Column(
+                                mainAxisSize: MainAxisSize.min,
+                                children: <Widget>[
+                                  const SizedBox(
+                                    height: 8,
+                                  ),
+                                  Row(
+                                    children: <Widget>[
+                                      Expanded(
+                                        flex: 46,
+                                        child: Container(
+                                          color: Colors.transparent,
+                                          height: 4,
+                                          width: double.infinity,
+                                        ),
+                                      ),
+                                      Expanded(
+                                        flex: 8,
+                                        child: Container(
+                                          decoration: BoxDecoration(
+                                            borderRadius:
+                                                BorderRadius.circular(4),
+                                            color: Colors.grey,
+                                          ),
+                                          height: 4,
+                                          width: double.infinity,
+                                        ),
+                                      ),
+                                      Expanded(
+                                        flex: 46,
+                                        child: Container(
+                                          color: Colors.transparent,
+                                          height: 4,
+                                          width: double.infinity,
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                  const SizedBox(
+                                    height: 8,
+                                  ),
+                                  Text(
+                                    'Apple Health App',
+                                    textAlign: TextAlign.center,
+                                    style: TextStyle(
+                                        color: Color.fromRGBO(89, 4, 255, 1),
+                                        fontSize: 24),
+                                  ),
+                                  ListTile(
+                                    leading: const Icon(
+                                      Icons.file_upload,
+                                      color: Color.fromRGBO(89, 4, 255, 1),
+                                    ),
+                                    title: const Text(
+                                      'File',
+                                      style: TextStyle(
+                                        color: Color.fromRGBO(30, 30, 30, 1),
+                                      ),
+                                    ),
+                                    onTap: () {
+                                      Navigator.pop(context);
+                                    },
+                                  ),
+                                  ListTile(
+                                    leading: const Icon(
+                                      Icons.scanner,
+                                      color: Color.fromRGBO(89, 4, 255, 1),
+                                    ),
+                                    title: const Text(
+                                      'Scan',
+                                      style: TextStyle(
+                                        color: Color.fromRGBO(30, 30, 30, 1),
+                                      ),
+                                    ),
+                                    onTap: () {
+                                      Navigator.pop(context);
+                                    },
+                                  ),
+                                  ListTile(
+                                    leading: const Icon(
+                                      Icons.link,
+                                      color: Color.fromRGBO(89, 4, 255, 1),
+                                    ),
+                                    title: const Text(
+                                      'Link',
+                                      style: TextStyle(
+                                        color: Color.fromRGBO(30, 30, 30, 1),
+                                      ),
+                                    ),
+                                    onTap: () {
+                                      Navigator.pop(context);
+                                    },
+                                  ),
+                                  ListTile(
+                                    leading: const Icon(
+                                      Icons.add_to_drive,
+                                      color: Color.fromRGBO(89, 4, 255, 1),
+                                    ),
+                                    title: const Text(
+                                      'Google Drive',
+                                      style: TextStyle(
+                                        color: Color.fromRGBO(30, 30, 30, 1),
+                                      ),
+                                    ),
+                                    onTap: () {
+                                      Navigator.pop(context);
+                                    },
+                                  ),
+                                ],
+                              );
+                            },
+                          );
+                        },
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(20),
+                          child: Image.asset(
+                            'assets/logo_2.jpg',
+                            width: 75,
+                            height: 75,
+                            fit: BoxFit.cover,
+                          ),
+                        ),
+                      ),
+                      GestureDetector(
+                        onTap: () {
+                          showModalBottomSheet<Table>(
+                            context: context,
+                            shape: const RoundedRectangleBorder(
+                              borderRadius: BorderRadius.vertical(
+                                top: Radius.circular(
+                                  20,
+                                ),
+                              ),
+                            ),
+                            builder: (final BuildContext context) {
+                              return Column(
+                                mainAxisSize: MainAxisSize.min,
+                                children: <Widget>[
+                                  const SizedBox(
+                                    height: 8,
+                                  ),
+                                  Row(
+                                    children: <Widget>[
+                                      Expanded(
+                                        flex: 46,
+                                        child: Container(
+                                          color: Colors.transparent,
+                                          height: 4,
+                                          width: double.infinity,
+                                        ),
+                                      ),
+                                      Expanded(
+                                        flex: 8,
+                                        child: Container(
+                                          decoration: BoxDecoration(
+                                            borderRadius:
+                                                BorderRadius.circular(4),
+                                            color: Colors.grey,
+                                          ),
+                                          height: 4,
+                                          width: double.infinity,
+                                        ),
+                                      ),
+                                      Expanded(
+                                        flex: 46,
+                                        child: Container(
+                                          color: Colors.transparent,
+                                          height: 4,
+                                          width: double.infinity,
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                  const SizedBox(
+                                    height: 8,
+                                  ),
+                                  Text(
+                                    'Apple Health App',
+                                    textAlign: TextAlign.center,
+                                    style: TextStyle(
+                                        color: Color.fromRGBO(89, 4, 255, 1),
+                                        fontSize: 24),
+                                  ),
+                                  ListTile(
+                                    leading: const Icon(
+                                      Icons.file_upload,
+                                      color: Color.fromRGBO(89, 4, 255, 1),
+                                    ),
+                                    title: const Text(
+                                      'File',
+                                      style: TextStyle(
+                                        color: Color.fromRGBO(30, 30, 30, 1),
+                                      ),
+                                    ),
+                                    onTap: () {
+                                      Navigator.pop(context);
+                                    },
+                                  ),
+                                  ListTile(
+                                    leading: const Icon(
+                                      Icons.scanner,
+                                      color: Color.fromRGBO(89, 4, 255, 1),
+                                    ),
+                                    title: const Text(
+                                      'Scan',
+                                      style: TextStyle(
+                                        color: Color.fromRGBO(30, 30, 30, 1),
+                                      ),
+                                    ),
+                                    onTap: () {
+                                      Navigator.pop(context);
+                                    },
+                                  ),
+                                  ListTile(
+                                    leading: const Icon(
+                                      Icons.link,
+                                      color: Color.fromRGBO(89, 4, 255, 1),
+                                    ),
+                                    title: const Text(
+                                      'Link',
+                                      style: TextStyle(
+                                        color: Color.fromRGBO(30, 30, 30, 1),
+                                      ),
+                                    ),
+                                    onTap: () {
+                                      Navigator.pop(context);
+                                    },
+                                  ),
+                                  ListTile(
+                                    leading: const Icon(
+                                      Icons.add_to_drive,
+                                      color: Color.fromRGBO(89, 4, 255, 1),
+                                    ),
+                                    title: const Text(
+                                      'Google Drive',
+                                      style: TextStyle(
+                                        color: Color.fromRGBO(30, 30, 30, 1),
+                                      ),
+                                    ),
+                                    onTap: () {
+                                      Navigator.pop(context);
+                                    },
+                                  ),
+                                ],
+                              );
+                            },
+                          );
+                        },
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(20),
+                          child: Image.asset(
+                            'assets/logo_3.jpg',
+                            width: 75,
+                            height: 75,
+                            fit: BoxFit.cover,
+                          ),
+                        ),
+                      ),
+                      GestureDetector(
+                        onTap: () {
+                          showModalBottomSheet<Table>(
+                            context: context,
+                            shape: const RoundedRectangleBorder(
+                              borderRadius: BorderRadius.vertical(
+                                top: Radius.circular(
+                                  20,
+                                ),
+                              ),
+                            ),
+                            builder: (final BuildContext context) {
+                              return Column(
+                                mainAxisSize: MainAxisSize.min,
+                                children: <Widget>[
+                                  const SizedBox(
+                                    height: 8,
+                                  ),
+                                  Row(
+                                    children: <Widget>[
+                                      Expanded(
+                                        flex: 46,
+                                        child: Container(
+                                          color: Colors.transparent,
+                                          height: 4,
+                                          width: double.infinity,
+                                        ),
+                                      ),
+                                      Expanded(
+                                        flex: 8,
+                                        child: Container(
+                                          decoration: BoxDecoration(
+                                            borderRadius:
+                                                BorderRadius.circular(4),
+                                            color: Colors.grey,
+                                          ),
+                                          height: 4,
+                                          width: double.infinity,
+                                        ),
+                                      ),
+                                      Expanded(
+                                        flex: 46,
+                                        child: Container(
+                                          color: Colors.transparent,
+                                          height: 4,
+                                          width: double.infinity,
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                  const SizedBox(
+                                    height: 8,
+                                  ),
+                                  Text(
+                                    'Apple Health App',
+                                    textAlign: TextAlign.center,
+                                    style: TextStyle(
+                                        color: Color.fromRGBO(89, 4, 255, 1),
+                                        fontSize: 24),
+                                  ),
+                                  ListTile(
+                                    leading: const Icon(
+                                      Icons.file_upload,
+                                      color: Color.fromRGBO(89, 4, 255, 1),
+                                    ),
+                                    title: const Text(
+                                      'File',
+                                      style: TextStyle(
+                                        color: Color.fromRGBO(30, 30, 30, 1),
+                                      ),
+                                    ),
+                                    onTap: () {
+                                      Navigator.pop(context);
+                                    },
+                                  ),
+                                  ListTile(
+                                    leading: const Icon(
+                                      Icons.scanner,
+                                      color: Color.fromRGBO(89, 4, 255, 1),
+                                    ),
+                                    title: const Text(
+                                      'Scan',
+                                      style: TextStyle(
+                                        color: Color.fromRGBO(30, 30, 30, 1),
+                                      ),
+                                    ),
+                                    onTap: () {
+                                      Navigator.pop(context);
+                                    },
+                                  ),
+                                  ListTile(
+                                    leading: const Icon(
+                                      Icons.link,
+                                      color: Color.fromRGBO(89, 4, 255, 1),
+                                    ),
+                                    title: const Text(
+                                      'Link',
+                                      style: TextStyle(
+                                        color: Color.fromRGBO(30, 30, 30, 1),
+                                      ),
+                                    ),
+                                    onTap: () {
+                                      Navigator.pop(context);
+                                    },
+                                  ),
+                                  ListTile(
+                                    leading: const Icon(
+                                      Icons.add_to_drive,
+                                      color: Color.fromRGBO(89, 4, 255, 1),
+                                    ),
+                                    title: const Text(
+                                      'Google Drive',
+                                      style: TextStyle(
+                                        color: Color.fromRGBO(30, 30, 30, 1),
+                                      ),
+                                    ),
+                                    onTap: () {
+                                      Navigator.pop(context);
+                                    },
+                                  ),
+                                ],
+                              );
+                            },
+                          );
+                        },
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(20),
+                          child: Image.asset(
+                            'assets/logo_4.jpg',
+                            width: 75,
+                            height: 75,
+                            fit: BoxFit.cover,
+                          ),
+                        ),
+                      ),
+                      GestureDetector(
+                        onTap: () {
+                          showModalBottomSheet<Table>(
+                            context: context,
+                            shape: const RoundedRectangleBorder(
+                              borderRadius: BorderRadius.vertical(
+                                top: Radius.circular(
+                                  20,
+                                ),
+                              ),
+                            ),
+                            builder: (final BuildContext context) {
+                              return Column(
+                                mainAxisSize: MainAxisSize.min,
+                                children: <Widget>[
+                                  const SizedBox(
+                                    height: 8,
+                                  ),
+                                  Row(
+                                    children: <Widget>[
+                                      Expanded(
+                                        flex: 46,
+                                        child: Container(
+                                          color: Colors.transparent,
+                                          height: 4,
+                                          width: double.infinity,
+                                        ),
+                                      ),
+                                      Expanded(
+                                        flex: 8,
+                                        child: Container(
+                                          decoration: BoxDecoration(
+                                            borderRadius:
+                                                BorderRadius.circular(4),
+                                            color: Colors.grey,
+                                          ),
+                                          height: 4,
+                                          width: double.infinity,
+                                        ),
+                                      ),
+                                      Expanded(
+                                        flex: 46,
+                                        child: Container(
+                                          color: Colors.transparent,
+                                          height: 4,
+                                          width: double.infinity,
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                  const SizedBox(
+                                    height: 8,
+                                  ),
+                                  Text(
+                                    'Apple Health App',
+                                    textAlign: TextAlign.center,
+                                    style: TextStyle(
+                                        color: Color.fromRGBO(89, 4, 255, 1),
+                                        fontSize: 24),
+                                  ),
+                                  ListTile(
+                                    leading: const Icon(
+                                      Icons.file_upload,
+                                      color: Color.fromRGBO(89, 4, 255, 1),
+                                    ),
+                                    title: const Text(
+                                      'File',
+                                      style: TextStyle(
+                                        color: Color.fromRGBO(30, 30, 30, 1),
+                                      ),
+                                    ),
+                                    onTap: () {
+                                      Navigator.pop(context);
+                                    },
+                                  ),
+                                  ListTile(
+                                    leading: const Icon(
+                                      Icons.scanner,
+                                      color: Color.fromRGBO(89, 4, 255, 1),
+                                    ),
+                                    title: const Text(
+                                      'Scan',
+                                      style: TextStyle(
+                                        color: Color.fromRGBO(30, 30, 30, 1),
+                                      ),
+                                    ),
+                                    onTap: () {
+                                      Navigator.pop(context);
+                                    },
+                                  ),
+                                  ListTile(
+                                    leading: const Icon(
+                                      Icons.link,
+                                      color: Color.fromRGBO(89, 4, 255, 1),
+                                    ),
+                                    title: const Text(
+                                      'Link',
+                                      style: TextStyle(
+                                        color: Color.fromRGBO(30, 30, 30, 1),
+                                      ),
+                                    ),
+                                    onTap: () {
+                                      Navigator.pop(context);
+                                    },
+                                  ),
+                                  ListTile(
+                                    leading: const Icon(
+                                      Icons.add_to_drive,
+                                      color: Color.fromRGBO(89, 4, 255, 1),
+                                    ),
+                                    title: const Text(
+                                      'Google Drive',
+                                      style: TextStyle(
+                                        color: Color.fromRGBO(30, 30, 30, 1),
+                                      ),
+                                    ),
+                                    onTap: () {
+                                      Navigator.pop(context);
+                                    },
+                                  ),
+                                ],
+                              );
+                            },
+                          );
+                        },
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(20),
+                          child: Image.asset(
+                            'assets/logo_5.jpg',
+                            width: 75,
+                            height: 75,
+                            fit: BoxFit.cover,
+                          ),
+                        ),
+                      ),
+                      GestureDetector(
+                        onTap: () {
+                          showModalBottomSheet<Table>(
+                            context: context,
+                            shape: const RoundedRectangleBorder(
+                              borderRadius: BorderRadius.vertical(
+                                top: Radius.circular(
+                                  20,
+                                ),
+                              ),
+                            ),
+                            builder: (final BuildContext context) {
+                              return Column(
+                                mainAxisSize: MainAxisSize.min,
+                                children: <Widget>[
+                                  const SizedBox(
+                                    height: 8,
+                                  ),
+                                  Row(
+                                    children: <Widget>[
+                                      Expanded(
+                                        flex: 46,
+                                        child: Container(
+                                          color: Colors.transparent,
+                                          height: 4,
+                                          width: double.infinity,
+                                        ),
+                                      ),
+                                      Expanded(
+                                        flex: 8,
+                                        child: Container(
+                                          decoration: BoxDecoration(
+                                            borderRadius:
+                                                BorderRadius.circular(4),
+                                            color: Colors.grey,
+                                          ),
+                                          height: 4,
+                                          width: double.infinity,
+                                        ),
+                                      ),
+                                      Expanded(
+                                        flex: 46,
+                                        child: Container(
+                                          color: Colors.transparent,
+                                          height: 4,
+                                          width: double.infinity,
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                  const SizedBox(
+                                    height: 8,
+                                  ),
+                                  Text(
+                                    'Apple Health App',
+                                    textAlign: TextAlign.center,
+                                    style: TextStyle(
+                                        color: Color.fromRGBO(89, 4, 255, 1),
+                                        fontSize: 24),
+                                  ),
+                                  ListTile(
+                                    leading: const Icon(
+                                      Icons.file_upload,
+                                      color: Color.fromRGBO(89, 4, 255, 1),
+                                    ),
+                                    title: const Text(
+                                      'File',
+                                      style: TextStyle(
+                                        color: Color.fromRGBO(30, 30, 30, 1),
+                                      ),
+                                    ),
+                                    onTap: () {
+                                      Navigator.pop(context);
+                                    },
+                                  ),
+                                  ListTile(
+                                    leading: const Icon(
+                                      Icons.scanner,
+                                      color: Color.fromRGBO(89, 4, 255, 1),
+                                    ),
+                                    title: const Text(
+                                      'Scan',
+                                      style: TextStyle(
+                                        color: Color.fromRGBO(30, 30, 30, 1),
+                                      ),
+                                    ),
+                                    onTap: () {
+                                      Navigator.pop(context);
+                                    },
+                                  ),
+                                  ListTile(
+                                    leading: const Icon(
+                                      Icons.link,
+                                      color: Color.fromRGBO(89, 4, 255, 1),
+                                    ),
+                                    title: const Text(
+                                      'Link',
+                                      style: TextStyle(
+                                        color: Color.fromRGBO(30, 30, 30, 1),
+                                      ),
+                                    ),
+                                    onTap: () {
+                                      Navigator.pop(context);
+                                    },
+                                  ),
+                                  ListTile(
+                                    leading: const Icon(
+                                      Icons.add_to_drive,
+                                      color: Color.fromRGBO(89, 4, 255, 1),
+                                    ),
+                                    title: const Text(
+                                      'Google Drive',
+                                      style: TextStyle(
+                                        color: Color.fromRGBO(30, 30, 30, 1),
+                                      ),
+                                    ),
+                                    onTap: () {
+                                      Navigator.pop(context);
+                                    },
+                                  ),
+                                ],
+                              );
+                            },
+                          );
+                        },
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(20),
+                          child: Image.asset(
+                            'assets/logo_6.jpg',
+                            width: 75,
+                            height: 75,
+                            fit: BoxFit.cover,
+                          ),
+                        ),
+                      ),
+                    ],
                   ),
-                  Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(0, 10, 0, 0),
-                    child: Container(
-                      width: double.infinity,
-                      height: 80,
-                      decoration: BoxDecoration(
-                        color: FlutterFlowTheme.of(context).primaryColor,
-                        image: DecorationImage(
-                          fit: BoxFit.cover,
-                          image: Image.network(
-                            '',
-                          ).image,
-                        ),
-                        borderRadius: BorderRadius.circular(20),
-                      ),
-                      child: ClipRRect(
-                        borderRadius: BorderRadius.circular(20),
-                        child: Image.network(
-                          'https://picsum.photos/seed/307/600',
-                          width: 100,
-                          height: 100,
-                          fit: BoxFit.cover,
-                        ),
-                      ),
-                    ),
-                  ),
-                  Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(0, 10, 0, 0),
-                    child: Container(
-                      width: double.infinity,
-                      height: 80,
-                      decoration: BoxDecoration(
-                        color: FlutterFlowTheme.of(context).primaryColor,
-                        image: DecorationImage(
-                          fit: BoxFit.cover,
-                          image: Image.network(
-                            '',
-                          ).image,
-                        ),
-                        borderRadius: BorderRadius.circular(20),
-                      ),
-                      child: ClipRRect(
-                        borderRadius: BorderRadius.circular(20),
-                        child: Image.network(
-                          'https://picsum.photos/seed/874/600',
-                          width: 100,
-                          height: 100,
-                          fit: BoxFit.cover,
-                        ),
-                      ),
-                    ),
-                  ),
-                  Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(0, 10, 0, 0),
-                    child: Container(
-                      width: double.infinity,
-                      height: 80,
-                      decoration: BoxDecoration(
-                        color: FlutterFlowTheme.of(context).primaryColor,
-                        image: DecorationImage(
-                          fit: BoxFit.cover,
-                          image: Image.network(
-                            '',
-                          ).image,
-                        ),
-                        borderRadius: BorderRadius.circular(20),
-                      ),
-                      child: ClipRRect(
-                        borderRadius: BorderRadius.circular(20),
-                        child: Image.network(
-                          'https://www.state.gov/wp-content/uploads/2018/11/Iceland-2109x1406.jpg',
-                          width: 100,
-                          height: 100,
-                          fit: BoxFit.cover,
-                        ),
-                      ),
-                    ),
-                  ),
-                ],
-              ),
+                ),
+              ],
             ),
           ),
         ),
