@@ -30,11 +30,21 @@ dependencies:
   easy_debounce:
   google_fonts:
   signature:
+  shared_preferences:
+  # page_transitions:
+  json_path:
+  timeago:
+  url_launcher:
+  font_awesome_flutter:
+  auto_size_text:
   flutter_localizations:
     sdk: flutter
   flutter:
     sdk: flutter
 
+
+dependency_overrides:
+  page_transition: "^2.0.5"
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.

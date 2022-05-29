@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="D:\Projectjes\Data Angels\Data-Angels-Web\Data-Angels-Web\data_angels\build\windows\CMakeFiles\81d383d8027545a721566fcf2e5a6173\flutter_windows.dll.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="D:\Projectjes\Data Angels\Data-Angels-Web\Data-Angels-Web\data_angels\build\windows\CMakeFiles\55a86d64f2b8954edf8d27a39c21c4c5\flutter_assemble.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="D:\Projectjes\Data Angels\Data-Angels-Web\Data-Angels-Web\data_angels\windows\flutter\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="D:\Projectjes\Data Angels\Data-Angels-Web\Data-Angels-Web\data_angels\build\windows\flutter\CMakeFiles\flutter_assemble" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{56075D59-932F-3D8E-B8E8-54D051D6D7BE}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

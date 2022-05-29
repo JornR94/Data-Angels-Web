@@ -20,36 +20,36 @@ class FFButtonOptions {
     this.borderSide,
   });
 
-  final TextStyle textStyle;
-  final double elevation;
-  final double height;
-  final double width;
-  final EdgeInsetsGeometry padding;
-  final Color color;
-  final Color disabledColor;
-  final Color disabledTextColor;
-  final Color splashColor;
-  final double iconSize;
-  final Color iconColor;
-  final EdgeInsetsGeometry iconPadding;
-  final double borderRadius;
-  final BorderSide borderSide;
+  final TextStyle? textStyle;
+  final double? elevation;
+  final double? height;
+  final double? width;
+  final EdgeInsetsGeometry? padding;
+  final Color? color;
+  final Color? disabledColor;
+  final Color? disabledTextColor;
+  final Color? splashColor;
+  final double? iconSize;
+  final Color? iconColor;
+  final EdgeInsetsGeometry? iconPadding;
+  final double? borderRadius;
+  final BorderSide? borderSide;
 }
 
 class FFButtonWidget extends StatefulWidget {
   const FFButtonWidget({
-    Key key,
-    @required this.text,
-    @required this.onPressed,
+    Key? key,
+    required this.text,
+    required this.onPressed,
     this.icon,
     this.iconData,
-    @required this.options,
+    required this.options,
     this.showLoadingIndicator = true,
   }) : super(key: key);
 
   final String text;
-  final Widget icon;
-  final IconData iconData;
+  final Widget? icon;
+  final IconData? iconData;
   final Function() onPressed;
   final FFButtonOptions options;
   final bool showLoadingIndicator;
@@ -70,7 +70,7 @@ class _FFButtonWidgetState extends State<FFButtonWidget> {
               height: 23,
               child: CircularProgressIndicator(
                 valueColor: AlwaysStoppedAnimation<Color>(
-                  widget.options.textStyle.color ?? Colors.white,
+                  widget.options.textStyle?.color ?? Colors.white,
                 ),
               ),
             ),
@@ -109,24 +109,26 @@ class _FFButtonWidgetState extends State<FFButtonWidget> {
       foregroundColor: MaterialStateProperty.resolveWith<Color>(
         (states) {
           if (states.contains(MaterialState.disabled)) {
-            return widget.options.disabledTextColor;
+            return widget.options.disabledTextColor ?? Colors.black;
           }
-          return widget.options.textStyle.color;
+          return widget.options.textStyle?.color != null
+              ? widget.options.textStyle!.color!
+              : Colors.black;
         },
       ),
       backgroundColor: MaterialStateProperty.resolveWith<Color>(
         (states) {
           if (states.contains(MaterialState.disabled)) {
-            return widget.options.disabledColor;
+            return widget.options.disabledColor ?? Colors.blue;
           }
-          return widget.options.color;
+          return widget.options.color ?? Colors.blue;
         },
       ),
       overlayColor: MaterialStateProperty.resolveWith<Color>((states) {
         if (states.contains(MaterialState.pressed)) {
-          return widget.options.splashColor;
+          return widget.options.splashColor ?? Colors.white;
         }
-        return null;
+        return Colors.white;
       }),
       padding: MaterialStateProperty.all(widget.options.padding ??
           const EdgeInsets.symmetric(horizontal: 8.0, vertical: 4.0)),
@@ -146,7 +148,7 @@ class _FFButtonWidgetState extends State<FFButtonWidget> {
                   widget.iconData,
                   size: widget.options.iconSize,
                   color: widget.options.iconColor ??
-                      widget.options.textStyle.color,
+                      widget.options.textStyle?.color,
                 ),
           ),
           label: textWidget,

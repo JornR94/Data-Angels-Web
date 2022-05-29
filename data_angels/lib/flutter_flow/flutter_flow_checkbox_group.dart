@@ -2,27 +2,27 @@ import 'package:data_angels/index.dart';
 
 class FlutterFlowCheckboxGroup extends StatefulWidget {
   const FlutterFlowCheckboxGroup({
-    this.initiallySelected,
-    @required this.options,
-    @required this.onChanged,
-    this.textStyle,
+    required this.initiallySelected,
+    required this.options,
+    required this.onChanged,
+    required this.textStyle,
     this.labelPadding,
     this.itemPadding,
-    this.activeColor,
-    this.checkColor,
+    required this.activeColor,
+    required this.checkColor,
     this.checkboxBorderRadius,
-    this.checkboxBorderColor,
+    required this.checkboxBorderColor,
   });
 
   final List<String> initiallySelected;
   final List<String> options;
   final void Function(List<String>) onChanged;
   final TextStyle textStyle;
-  final EdgeInsetsGeometry labelPadding;
-  final EdgeInsetsGeometry itemPadding;
+  final EdgeInsetsGeometry? labelPadding;
+  final EdgeInsetsGeometry? itemPadding;
   final Color activeColor;
   final Color checkColor;
-  final BorderRadius checkboxBorderRadius;
+  final BorderRadius? checkboxBorderRadius;
   final Color checkboxBorderColor;
 
   @override
@@ -31,7 +31,7 @@ class FlutterFlowCheckboxGroup extends StatefulWidget {
 }
 
 class _FlutterFlowCheckboxGroupState extends State<FlutterFlowCheckboxGroup> {
-  List<String> checkboxValues;
+  late List<String> checkboxValues;
 
   @override
   void initState() {
