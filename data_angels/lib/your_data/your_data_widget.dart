@@ -26,6 +26,7 @@ class _YourDataWidgetState extends State<YourDataWidget> {
           borderRadius: 30,
           borderWidth: 1,
           buttonSize: 60,
+          fillColor: Colors.transparent,
           icon: Icon(
             Icons.chevron_left,
             color: Colors.white,
@@ -50,6 +51,7 @@ class _YourDataWidgetState extends State<YourDataWidget> {
             borderRadius: 30,
             borderWidth: 1,
             buttonSize: 60,
+            fillColor: Colors.transparent,
             icon: Icon(
               Icons.add,
               color: Colors.white,

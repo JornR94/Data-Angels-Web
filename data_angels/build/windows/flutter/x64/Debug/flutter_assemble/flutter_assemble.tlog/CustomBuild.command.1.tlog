@@ -1,0 +1,28 @@
+^D:\PROJECTJES\DATA ANGELS\DATA-ANGELS-WEB\DATA-ANGELS-WEB\DATA_ANGELS\BUILD\WINDOWS\CMAKEFILES\81D383D8027545A721566FCF2E5A6173\FLUTTER_WINDOWS.DLL.RULE
+setlocal
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E env FLUTTER_ROOT=C:\Users\jorn-\flutter "PROJECT_DIR=D:\Projectjes\Data Angels\Data-Angels-Web\Data-Angels-Web\data_angels" FLUTTER_ROOT=C:\Users\jorn-\flutter "FLUTTER_EPHEMERAL_DIR=D:\Projectjes\Data Angels\Data-Angels-Web\Data-Angels-Web\data_angels\windows\flutter\ephemeral" "PROJECT_DIR=D:\Projectjes\Data Angels\Data-Angels-Web\Data-Angels-Web\data_angels" "FLUTTER_TARGET=D:\Projectjes\Data Angels\Data-Angels-Web\Data-Angels-Web\data_angels\lib\main.dart" DART_DEFINES=RkxVVFRFUl9XRUJfQVVUT19ERVRFQ1Q9dHJ1ZQ== DART_OBFUSCATION=false TRACK_WIDGET_CREATION=true TREE_SHAKE_ICONS=false "PACKAGE_CONFIG=D:\Projectjes\Data Angels\Data-Angels-Web\Data-Angels-Web\data_angels\.dart_tool\package_config.json" C:/Users/jorn-/flutter/packages/flutter_tools/bin/tool_backend.bat windows-x64 Debug
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^D:\PROJECTJES\DATA ANGELS\DATA-ANGELS-WEB\DATA-ANGELS-WEB\DATA_ANGELS\BUILD\WINDOWS\CMAKEFILES\55A86D64F2B8954EDF8D27A39C21C4C5\FLUTTER_ASSEMBLE.RULE
+setlocal
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^D:\PROJECTJES\DATA ANGELS\DATA-ANGELS-WEB\DATA-ANGELS-WEB\DATA_ANGELS\WINDOWS\FLUTTER\CMAKELISTS.TXT
+setlocal
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" "-SD:/Projectjes/Data Angels/Data-Angels-Web/Data-Angels-Web/data_angels/windows" "-BD:/Projectjes/Data Angels/Data-Angels-Web/Data-Angels-Web/data_angels/build/windows" --check-stamp-file "D:/Projectjes/Data Angels/Data-Angels-Web/Data-Angels-Web/data_angels/build/windows/flutter/CMakeFiles/generate.stamp"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

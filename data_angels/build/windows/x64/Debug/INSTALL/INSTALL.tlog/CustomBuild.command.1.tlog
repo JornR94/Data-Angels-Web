@@ -1,0 +1,10 @@
+^D:\PROJECTJES\DATA ANGELS\DATA-ANGELS-WEB\DATA-ANGELS-WEB\DATA_ANGELS\BUILD\WINDOWS\CMAKEFILES\7AD4397715B4D0DF349979191C5B2046\INSTALL_FORCE.RULE
+setlocal
+cd .
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

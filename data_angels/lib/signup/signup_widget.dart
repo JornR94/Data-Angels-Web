@@ -17,14 +17,14 @@ class SignupWidget extends StatefulWidget {
 }
 
 class _SignupWidgetState extends State<SignupWidget> {
-  late List<String> checkboxGroupValues1;
+  List<String>? checkboxGroupValues1;
   TextEditingController textController1 = TextEditingController();
   TextEditingController textController2 = TextEditingController();
   TextEditingController textController3 = TextEditingController();
   TextEditingController textController4 = TextEditingController();
   TextEditingController textController5 = TextEditingController();
   SignatureController signatureController = SignatureController();
-  late List<String> checkboxGroupValues2;
+  List<String>? checkboxGroupValues2;
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
@@ -54,6 +54,7 @@ class _SignupWidgetState extends State<SignupWidget> {
           borderRadius: 30,
           borderWidth: 1,
           buttonSize: 60,
+          fillColor: Colors.black,
           icon: Icon(
             Icons.chevron_left,
             color: Colors.white,
@@ -389,7 +390,7 @@ class _SignupWidgetState extends State<SignupWidget> {
                           padding: EdgeInsetsDirectional.fromSTEB(0, 20, 0, 0),
                           child: FlutterFlowCheckboxGroup(
                             initiallySelected: checkboxGroupValues1 != null
-                                ? checkboxGroupValues1
+                                ? checkboxGroupValues1!
                                 : [],
                             options:
                                 ['I  Agree with HIPPA Guidelines'].toList(),
@@ -417,7 +418,7 @@ class _SignupWidgetState extends State<SignupWidget> {
                           padding: EdgeInsetsDirectional.fromSTEB(0, 20, 0, 0),
                           child: FlutterFlowCheckboxGroup(
                             initiallySelected: checkboxGroupValues2 != null
-                                ? checkboxGroupValues2
+                                ? checkboxGroupValues2!
                                 : [],
                             options: ['I  Agree to Share my Data'].toList(),
                             onChanged: (val) =>

@@ -1,0 +1,10 @@
+^D:\PROJECTJES\DATA ANGELS\DATA-ANGELS-WEB\DATA-ANGELS-WEB\DATA_ANGELS\WINDOWS\FLUTTER\CMAKELISTS.TXT
+setlocal
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" "-SD:/Projectjes/Data Angels/Data-Angels-Web/Data-Angels-Web/data_angels/windows" "-BD:/Projectjes/Data Angels/Data-Angels-Web/Data-Angels-Web/data_angels/build/windows" --check-stamp-file "D:/Projectjes/Data Angels/Data-Angels-Web/Data-Angels-Web/data_angels/build/windows/flutter/CMakeFiles/generate.stamp"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
